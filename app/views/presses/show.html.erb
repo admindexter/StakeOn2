@@ -1,0 +1,88 @@
+<% title "Press" %>
+
+    <span id="right_content">
+
+      <div id="form_content">
+
+        <div id="form_content_header">
+
+          <span id="form_content_header_left">
+          <!-- end #form_content_header_left --></span>
+
+          <span id="form_content_header_body">
+          <!-- end #form_content_header_body --></span>
+
+          <span id="form_content_header_right">
+          <!-- end #form_content_header_right --></span>
+
+        <!-- end #form_content_header --></div>
+
+        <div id="form_content_body">
+
+          <div id="form_content_text">
+
+            <div id="content_body">
+
+              <p></p>
+
+              <h4><%=h @press.title %></h4>
+
+              <div id="news_article_photo">
+                <div class="last_photo">
+                  <%= image_tag @press.photo.url(:preview) %>
+                </div>
+
+                <div id="news_article_photo_tag">
+                  <b><%=h @press.location %></b><br />
+                  <%=h @press.emphasis %><br /><br />
+                  <%=h @press.date_of_event %><br /><br />
+                  <%=h @press.author %><br /><br />
+                </div>
+              </div>
+
+              <%= @press.information %>
+
+              <p class="return_link">
+                <span><%= link_to 'Edit', edit_press_path(@press) %></span>
+                <span> | </span>
+                <span><%= link_to "Destroy", @press, :confirm => 'Are you sure?', :method => :delete %></span>
+                <span> | </span>
+                <span><%= link_to 'View All', presses_path %></span>
+              </p>
+
+            <!-- end #content_body --></div>
+
+          <!-- end #form_content_text --></div>
+
+        <!-- end #form_content_body --></div>
+
+        <div id="form_content_footer">
+
+          <span id="form_content_footer_left">
+          <!-- end #form_content_footer_left --></span>
+
+          <span id="form_content_footer_body">
+          <!-- end #form_content_footer_body --></span>
+
+          <span id="form_content_footer_right">
+          <!-- end #form_content_footer_right --></span>
+
+        <!-- end #form_content_footer --></div>
+
+      <!-- end #form_content --></div>
+
+      <div id="info_content">
+
+        <span id="info_content_left">
+        <!-- end #info_content_left --></span>
+
+        <span id="info_content_text">
+        <!-- end #info_content_text --></span>
+
+        <span id="info_content_picture">
+        <!-- end #info_content_picture --></span>
+
+      <!-- end #info_content --></div>
+
+    <!-- end #right_content --></span>
+

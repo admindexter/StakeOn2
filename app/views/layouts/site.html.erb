@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'site' %>
+    <%= yield(:head) %>
+  </head>
+
+<body>
+
+
+<div id="header_top">
+<!-- end #header_top --></div>
+
+<div id="header">
+
+  <div id="flash_slide">
+  <!-- end #flash_slide --></div>
+
+<!-- end #header --></div>
+
+<div id="navigation">
+
+  <div id="navigation_holder">
+
+    <span class="button"><%= link_to_unless_current 'Home', home_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Results', result_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Our Games', games_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Winners', winner_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'How To Play', learn_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'News', presses_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Gallery', galleries_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Contact', contact_path %>
+    <!-- end .button --></span>
+
+  <!-- end #navigation_holder --></div>
+
+<!-- end #navigation --></div>
+
+<div id="navigation_bottom">
+<!-- end #navigation_bottom --></div>
+
+<div id="user_nav_holder">
+
+  <div id="user_nav">
+    <% if current_user %>
+      <%= link_to "Edit basic info", edit_user_path(:current) %> or
+      <%= link_to "Logout", logout_path %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_path %> or
+      <%= link_to "Log in", login_path %>
+    <% end %>
+  <!-- end #user_nav --></div>
+
+<!-- end #user_nav_holder --></div>
+
+<div id="content">
+
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <%- end -%>
+
+  <div id="sidebar_right_content">
+
+    <span id="sidebar">
+
+          <div id="sidebar_header">
+          <!-- end #sidebar_header --></div>
+
+          <div id="sidebar_body">
+
+            <div id="sidebar_body_head">
+
+              <div id="sidebar_body_foot">
+
+                <div id="sidebar_body_foot_content">
+
+                  <% if @last_five_presses %>
+
+                    <% for press in @last_five_presses %>
+
+                      <div class="news_container_span2_news_div">
+
+                        <div class="news_container_span2_news_div_content_div">
+
+                          <div class="news_date"><%=h press.updated_at %>
+                          <!-- end .news_date --></div>
+
+                          <div class="news_header"><%=h truncate(press.title.gsub(/<.*?>/,''), :length => 70) %>
+                          <!-- end .news_header --></div>
+
+                          <div class="news_info">
+                            <%=h truncate(press.information.gsub(/<.*?>/,''), :length => 270) %>
+                          <!-- end .news_info --></div>
+
+                          <div class="read_more_news"><%= link_to 'Read more', press %>
+                          <!-- end .read_more_news --></div>
+
+                        <!-- end .news_container_span2_news_div_content_div --></div>
+
+                      <!-- end .news_container_span2_news_div --></div>
+
+                    <% end %>
+
+                  <% else %>
+
+                  <% end %>
+
+                <!-- end #sidebar_body_foot_content --></div>
+
+              <!-- end #sidebar_body_foot --></div>
+
+            <!-- end #sidebar_body_head --></div>
+
+          <!-- end #sidebar_body --></div>
+
+          <div id="sidebar_footer">
+          <!-- end #sidebar_footer --></div>
+
+    <!-- end #sidebar --></span>
+
+    <%= yield %>
+
+  <!-- end #sidebar_right_content --></div>
+
+<!-- end #content --></div>
+
+<div id="container_right_content_gap">
+<!-- end #container_right_content_gap --></div>
+
+<div id="container">
+<!-- end #container --></div>
+
+  <div id="footer">
+  <!-- end #footer --></div>
+
+</body>
+</html>
+

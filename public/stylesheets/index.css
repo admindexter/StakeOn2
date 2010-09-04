@@ -1,0 +1,323 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #dadbde;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+#header_top {
+	height: 87px;
+	background: #000 url(../images/header_top_bg.jpg) repeat-x left top;
+}
+
+#header {
+	background:                 url(../images/header_bg.jpg) repeat-x left;
+	height:                     352px;
+}
+
+#flash_slide {
+	background:                 url(../images/header.jpg);
+	height:                     352px;
+	width:                      1085px;
+	margin:                     0 auto;
+}
+
+#navigation {
+	background:                 url(../images/navigation_bg.jpg) repeat-x left;
+	height:                     35px;
+}
+
+#navigation_holder {
+    width:                      1024px;
+    margin:                     0 auto;
+}
+
+.button {
+    font-family:                Georgia, serif;
+    font-size:                  10px;
+    font-style:                 normal;
+    font-weight:                normal;
+    text-transform:             uppercase;
+    letter-spacing:             0px;
+    line-height:                35px;
+
+
+	background:			 		url(../images/navigation_highlight_button_128.jpg) repeat-x;
+	float: 						left;
+	height:			 			35px;
+	width: 						128px;
+	margin: 					0;
+	padding: 					0;
+	white-space:		 		nowrap;
+	text-align:					center;
+	color:                      white;
+}
+
+.button a {
+	text-decoration: 			none;
+	display:					block;
+	background:			 		url(../images/navigation_bg.jpg) repeat-x;
+	color:						white;
+}
+
+.button a:visited {
+	text-decoration: 			none;
+	display:					block;
+	color:						white;
+}
+
+.button a:hover {
+	background:			 		url(../images/navigation_highlight_button_128.jpg) repeat-x;
+	text-decoration: 			none;
+	display:					block;
+	color:						white;
+}
+
+
+#navigation_bottom {
+	background:                 url(../images/navigation_bottom_bg.jpg) repeat-x left;
+	height:                     48px;
+}
+
+#user_nav_holder {
+  width:                        1000px;
+  height:                       30px;
+  margin:                       0 auto;
+}
+
+#user_nav {
+  float: right;
+  font-size: 12px;
+}
+
+#content {
+	height: 545px;
+}
+
+#content_body {
+	height: 545px;
+	width: 1016px;
+	margin: 0 auto;
+}
+
+#content_body_gap_button {
+	height: 26px;
+}
+
+#content_body_button {
+	height: 120px;
+}
+
+#login_button {
+	height: 120px;
+	width: 290px;
+	background: url(../images/login_button.jpg) no-repeat;
+	float: left;
+}
+
+#winners_button {
+	height: 120px;
+	width: 290px;
+	background: url(../images/winners_button.jpg) no-repeat;
+	float: left;
+}
+
+#register_button {
+	height: 120px;
+	width: 290px;
+	background: url(../images/register_button.jpg) no-repeat;
+	float: left;
+}
+
+.button_gap {
+	height: 120px;
+	width: 73px;
+	float: left;
+}
+
+#content_body_gap_envelope {
+	height: 56px;
+}
+
+#content_body_envelope {
+	height: 293px;
+}
+
+#envelope_left {
+	float: left;
+	width: 393px;
+	height: 293px;
+	background: url(../images/envelope_left.jpg) no-repeat;
+}
+
+#envelope_left_gap_left_content {
+	float: left;
+	width: 50px;
+	height: 293px;
+}
+
+#envelope_left_content {
+	float: left;
+	width: 277px;
+	height: 293px;
+}
+
+#envelope_left_content_header {
+	width: 277px;
+	height: 34px;
+}
+
+#envelope_left_content_picture {
+	width: 277px;
+	height: 136px;;
+}
+
+#envelope_left_content_text {
+	width: 277px;
+	height: 75px;
+}
+
+#envelope_left_content_button {
+	width: 277px;
+	height: 48px;
+}
+
+#envelope_left_gap_right_content {
+	float: left;
+	width: 66px;
+	height: 293px;
+}
+
+#envelope_picture {
+	float: left;
+	width: 218px;
+	height: 293px;
+	background: url(../images/envelope_picture.jpg) no-repeat;
+}
+
+#envelope_right {
+	float: left;
+	width: 405px;
+	height: 293px;
+	background: url(../images/envelope_right.jpg) no-repeat;
+}
+
+#envelope_right_gap_left_content {
+	float: left;
+	width: 108px;
+	height: 293px;
+}
+
+#envelope_right_content {
+	float: left;
+	width: 272px;
+	height: 293px;
+}
+
+#envelope_right_content_header {
+	width: 272px;
+	height: 34px;
+}
+
+#envelope_right_content_text {
+	width: 272px;
+	height: 80px;
+}
+
+#envelope_right_content_buttons {
+	width: 272px;
+	height: 132px;
+}
+
+.envelope_right_content_button {
+	width: 272px;
+	height: 44px;
+	background: url(../images/envelope_right_normal_button.jpg) no-repeat;
+}
+
+#envelope_right_content_button_highlight {
+	width: 272px;
+	height: 44px;
+	background: url(../images/envelope_right_highlight_button.jpg) no-repeat;
+}
+
+#envelope_right_gap_right_content {
+	float: left;
+	width: 25px;
+	height: 293px;
+}
+
+#content_body_gap_container {
+	height: 50px;
+}
+
+#container {
+	clear: left;
+	height: 285px;
+	background: #161616 url(../images/container_bg.jpg) center;
+}
+
+#footer {
+	height: 48px;
+	background:#161616;
+	border-top: thin solid #474747;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+

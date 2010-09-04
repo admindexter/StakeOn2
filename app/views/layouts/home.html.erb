@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'index' %>
+    <%= yield(:head) %>
+  </head>
+
+<body>
+
+<div id="header_top">
+<!-- end #header_top --></div>
+
+<div id="header">
+
+  <div id="flash_slide">
+  <!-- end #flash_slide --></div>
+
+<!-- end #header --></div>
+
+<div id="navigation">
+
+  <div id="navigation_holder">
+
+    <span class="button"><%= link_to_unless_current 'Home', home_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Results', result_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Our Games', games_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Winners', winner_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'How To Play', learn_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'News', presses_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Gallery', galleries_path %>
+    <!-- end .button --></span>
+
+    <span class="button"><%= link_to_unless_current 'Contact', contact_path %>
+    <!-- end .button --></span>
+
+  <!-- end #navigation_holder --></div>
+
+<!-- end #navigation --></div>
+
+<div id="navigation_bottom">
+<!-- end #navigation_bottom --></div>
+
+<div id="user_nav_holder">
+
+  <div id="user_nav">
+    <% if current_user %>
+      <%= link_to "Edit basic info", edit_user_path(:current) %> |
+      <%= link_to "Logout", logout_path %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_path %> or
+      <%= link_to "Log in", login_path %>
+    <% end %>
+  <!-- end #user_nav --></div>
+
+<!-- end #user_nav_holder --></div>
+
+<div id="content">
+
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <%- end -%>
+
+  <%= yield %>
+
+<!-- end #content --></div>
+
+<div id="container">
+<!-- end #container --></div>
+
+<div id="footer">
+<!-- end #footer --></div>
+
+</body>
+</html>
+

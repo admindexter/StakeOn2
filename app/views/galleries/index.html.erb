@@ -1,0 +1,93 @@
+<% title "Galleries" %>
+
+    <span id="right_content">
+
+      <div id="form_content">
+
+        <div id="form_content_header">
+
+          <span id="form_content_header_left">
+          <!-- end #form_content_header_left --></span>
+
+          <span id="form_content_header_body">
+          <!-- end #form_content_header_body --></span>
+
+          <span id="form_content_header_right">
+          <!-- end #form_content_header_right --></span>
+
+        <!-- end #form_content_header --></div>
+
+        <div id="form_content_body">
+
+          <div id="form_content_text">
+
+            <div id="content_body">
+
+              <p></p>
+
+              <% for gallery in @galleries %>
+
+                <span class="pic_pt">
+                  <div class="pic_pt_image_holder">
+                    <%= link_to image_tag(gallery.photo.url(:thumbnail)), gallery %>
+                  </div>
+
+                  <div class="pic_pt_text_holder">
+                    <%=h truncate(gallery.title.gsub(/<.*?>/,''), :length => 45) %>
+                  </div>
+
+                  <div class="pic_pt_button_holder">
+                    <%= link_to image_tag("view_picture_button.jpg"), gallery %>
+                  </div>
+                </span>
+
+                <span class="pic_pt_gap">
+                </span>
+
+              <% end %>
+
+              <div class="pagination">
+                <%= will_paginate @galleries %>
+              </div>
+
+              <p class="return_link">
+                <%= link_to 'New gallery', new_gallery_path %>
+              </p>
+
+            <!-- end #content_body --></div>
+
+
+          <!-- end #form_content_text --></div>
+
+        <!-- end #form_content_body --></div>
+
+        <div id="form_content_footer">
+
+          <span id="form_content_footer_left">
+          <!-- end #form_content_footer_left --></span>
+
+          <span id="form_content_footer_body">
+          <!-- end #form_content_footer_body --></span>
+
+          <span id="form_content_footer_right">
+          <!-- end #form_content_footer_right --></span>
+
+        <!-- end #form_content_footer --></div>
+
+      <!-- end #form_content --></div>
+
+      <div id="info_content">
+
+        <span id="info_content_left">
+        <!-- end #info_content_left --></span>
+
+        <span id="info_content_text">
+        <!-- end #info_content_text --></span>
+
+        <span id="info_content_picture">
+        <!-- end #info_content_picture --></span>
+
+      <!-- end #info_content --></div>
+
+    <!-- end #right_content --></span>
+

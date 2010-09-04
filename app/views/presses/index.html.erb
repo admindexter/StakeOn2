@@ -1,0 +1,121 @@
+<% title "Press" %>
+
+    <span id="right_content">
+
+      <div id="form_content">
+
+        <div id="form_content_header">
+
+          <span id="form_content_header_left">
+          <!-- end #form_content_header_left --></span>
+
+          <span id="form_content_header_body">
+          <!-- end #form_content_header_body --></span>
+
+          <span id="form_content_header_right">
+          <!-- end #form_content_header_right --></span>
+
+        <!-- end #form_content_header --></div>
+
+        <div id="form_content_body">
+
+          <div id="form_content_text">
+
+            <div id="content_body">
+
+              <p></p>
+
+              <% @presses.each do |press| %>
+              <div valign="top" class="<%= cycle('articles_div_odd', 'articles_div_even') %>">
+
+                <div class="articles_div_top_gap">
+                </div><!-- end .articles_div_top_gap -->
+
+                <span class="articles_div_gap_2">
+                </span><!-- end .articles_div_gap_2 -->
+
+                <span class="articles_div_photo_holder">
+                  <div class="articles_div_photo">
+                    <%= link_to image_tag(press.photo.url(:snapshot)), press %>
+                  </div><!-- end .articles_div_photo -->
+                </span><!-- end .articles_div_photo_holder -->
+
+                <span class="articles_div_gap_1">
+                </span><!-- end .articles_div_gap_1 -->
+
+                <span class="articles_div_gap_2">
+                </span><!-- end .articles_div_gap_2 -->
+
+                <span class="articles_div_details">
+                  <div class="last_title"><%=h truncate(press.title.gsub(/<.*?>/,''), :length => 120) %></div>
+
+                  <div class="last_location"><%=h truncate(press.location.gsub(/<.*?>/,''), :length => 40) %></div>
+
+                  <div class="last_emphasis"><%=h truncate(press.emphasis.gsub(/<.*?>/,''), :length => 40) %></div>
+
+                  <div class="last_description"><%=h truncate(press.information.gsub(/<.*?>/,''), :length => 280) %></div>
+
+                  <div class="last_author"><%= press.author %></div>
+
+                  <div class="event_manage">
+
+                	  <span><%= link_to 'Show', press %></span>
+                    <span> | </span>
+                    <span><%= link_to 'Edit', edit_press_path(press) %></span>
+                    <span> | </span>
+                    <span><%= link_to 'Destroy', press, :confirm => 'Are you sure?', :method => :delete %></span>
+
+                  </div><!-- end .event_manage -->
+
+                </span><!-- end .articles_div_details -->
+
+              </div><!-- end .articles_div_odd -->
+              <% end %>
+
+              <div class="pagination">
+
+                <div class="articles_div_top_gap">
+                </div><!-- end .articles_div_top_gap -->
+
+                <%= will_paginate @presses %>
+              </div><!-- end .pagination -->
+
+              <p class="return_link">
+	              <span><%= link_to 'New press', new_press_path %></span>
+              </p>
+            <!-- end #content_body --></div>
+
+          <!-- end #form_content_text --></div>
+
+        <!-- end #form_content_body --></div>
+
+        <div id="form_content_footer">
+
+          <span id="form_content_footer_left">
+          <!-- end #form_content_footer_left --></span>
+
+          <span id="form_content_footer_body">
+          <!-- end #form_content_footer_body --></span>
+
+          <span id="form_content_footer_right">
+          <!-- end #form_content_footer_right --></span>
+
+        <!-- end #form_content_footer --></div>
+
+      <!-- end #form_content --></div>
+
+      <div id="info_content">
+
+        <span id="info_content_left">
+        <!-- end #info_content_left --></span>
+
+        <span id="info_content_text">
+        <!-- end #info_content_text --></span>
+
+        <span id="info_content_picture">
+        <!-- end #info_content_picture --></span>
+
+      <!-- end #info_content --></div>
+
+    <!-- end #right_content --></span>
+
