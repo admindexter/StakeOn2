@@ -1,0 +1,4 @@
+PassengerEnabled On
+PassengerAppRoot /home/stakeon2/apps/stakeon2/current/
+RailsEnv production
+
