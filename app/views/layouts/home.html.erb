@@ -10,6 +10,11 @@
 <body>
 
 <div id="header_top">
+  <%- if show_title? -%>
+    <div id="header_title">
+      <%=h yield(:title) %>
+    <!-- end #header_title --></div>
+  <%- end -%>
 <!-- end #header_top --></div>
 
 <div id="header">

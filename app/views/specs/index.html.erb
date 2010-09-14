@@ -1,0 +1,51 @@
+<% title "Specs" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Gender</th>
+    <th>Birthdate</th>
+    <th>State Of Origin</th>
+    <th>Local Government Area</th>
+    <th>Residential Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
+    <th>Mobile Number</th>
+    <th>Home Number</th>
+    <th>State Of Participation</th>
+    <th>Payment Method</th>
+    <th>Account Name</th>
+    <th>Account Number</th>
+    <th>Teller Number</th>
+  </tr>
+  <% for spec in @specs %>
+    <tr>
+      <td><%=h spec.user_id %></td>
+      <td><%=h spec.first_name %></td>
+      <td><%=h spec.last_name %></td>
+      <td><%=h spec.gender %></td>
+      <td><%=h spec.birthdate %></td>
+      <td><%=h spec.state_of_origin %></td>
+      <td><%=h spec.local_government_area %></td>
+      <td><%=h spec.residential_address %></td>
+      <td><%=h spec.city %></td>
+      <td><%=h spec.state %></td>
+      <td><%=h spec.zip_code %></td>
+      <td><%=h spec.mobile_number %></td>
+      <td><%=h spec.home_number %></td>
+      <td><%=h spec.state_of_participation %></td>
+      <td><%=h spec.payment_method %></td>
+      <td><%=h spec.account_name %></td>
+      <td><%=h spec.account_number %></td>
+      <td><%=h spec.teller_number %></td>
+      <td><%= link_to "Show", spec %></td>
+      <td><%= link_to "Edit", edit_spec_path(spec) %></td>
+      <td><%= link_to "Destroy", spec, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Spec", new_spec_path %></p>

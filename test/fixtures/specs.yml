@@ -1,0 +1,39 @@
+one:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  gender: MyString
+  birthdate: 2010-09-14 04:58:05
+  state_of_origin: MyString
+  local_government_area: MyString
+  residential_address: MyText
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  mobile_number: MyString
+  home_number: MyString
+  state_of_participation: MyString
+  payment_method: MyString
+  account_name: MyString
+  account_number: MyString
+  teller_number: MyString
+
+two:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  gender: MyString
+  birthdate: 2010-09-14 04:58:05
+  state_of_origin: MyString
+  local_government_area: MyString
+  residential_address: MyText
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  mobile_number: MyString
+  home_number: MyString
+  state_of_participation: MyString
+  payment_method: MyString
+  account_name: MyString
+  account_number: MyString
+  teller_number: MyString

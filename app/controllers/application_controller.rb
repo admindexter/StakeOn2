@@ -8,7 +8,12 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
-  helper_method :current_user
+  helper_method :current_user_session, :current_user
+
+  # Return true if a parameter corresponding to the given symbol was posted.
+  def param_posted?(sym)
+    request.post? and params[sym]
+  end
 
   private
 
@@ -21,5 +26,13 @@ class ApplicationController < ActionController::Base
     @current_user = current_user_session && current_user_session.record
   end
 
+  # Protect a page from unauthorized access.
+  def protect
+    unless current_user_session
+      flash[:notice] = "Please log in first"
+      redirect_to login_path
+      return false
+    end
+  end
 end
 

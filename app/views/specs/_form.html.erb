@@ -1,0 +1,88 @@
+  <% form_for :spec do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :gender %><br />
+    <%= radio_button :spec, :gender, "Male"   %> Male
+    <%= radio_button :spec, :gender, "Female" %> Female
+  </p>
+  <p>
+    <%= f.label :birthdate %><br />
+    <%= f.datetime_select :birthdate %>
+  </p>
+  <p>
+    <%= f.label :state_of_origin %><br />
+    <%= f.text_field :state_of_origin %>
+  </p>
+  <p>
+    <%= f.label :local_government_area %><br />
+    <%= f.text_field :local_government_area %>
+  </p>
+  <p>
+    <%= f.label :residential_address %><br />
+    <%= f.text_area :residential_address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </p>
+  <p>
+    <%= f.label :occupation %><br />
+    <%= f.text_field :occupation %>
+  </p>
+  <p>
+    <%= f.label :mobile_number %><br />
+    <%= f.text_field :mobile_number %>
+  </p>
+  <p>
+    <%= f.label :home_number %><br />
+    <%= f.text_field :home_number %>
+  </p>
+  <p>
+    <%= f.label :state_of_participation %><br />
+    <%= radio_button :spec, :state_of_participation, "Rivers"   %> Rivers
+    <%= radio_button :spec, :state_of_participation, "Lagos"   %> Lagos
+    <%= radio_button :spec, :state_of_participation, "Onitsha"   %> Onitsha
+    <%= radio_button :spec, :state_of_participation, "Aba"   %> Aba
+  </p>
+  <p>
+    <%= f.label :payment_method %><br />
+    <%= radio_button :spec, :payment_method, "UBA Moneygram" %> UBA Moneygram
+    <%= radio_button :spec, :payment_method, "Western Union Money Transfer" %> Western Union Money Transfer
+    <%= radio_button :spec, :payment_method, "Liberty Reserve" %> Liberty Reserve
+    <%= radio_button :spec, :payment_method, "Bank Account"   %> Bank Account
+  </p>
+  <p>
+    <%= f.label :bank_name %><br />
+    <%= f.text_field :bank_name %>
+  </p>
+  <p>
+    <%= f.label :account_name %><br />
+    <%= f.text_field :account_name %>
+  </p>
+  <p>
+    <%= f.label :account_number %><br />
+    <%= f.text_field :account_number %>
+  </p>
+  <p>
+    <%= f.label :teller_number %><br />
+    <%= f.text_field :teller_number %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+

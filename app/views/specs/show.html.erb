@@ -1,0 +1,80 @@
+<% title "Spec" %>
+
+<p>
+  <strong>User:</strong>
+  <%=h @spec.user_id %>
+</p>
+<p>
+  <strong>First Name:</strong>
+  <%=h @spec.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%=h @spec.last_name %>
+</p>
+<p>
+  <strong>Gender:</strong>
+  <%=h @spec.gender %>
+</p>
+<p>
+  <strong>Birthdate:</strong>
+  <%=h @spec.birthdate %>
+</p>
+<p>
+  <strong>State Of Origin:</strong>
+  <%=h @spec.state_of_origin %>
+</p>
+<p>
+  <strong>Local Government Area:</strong>
+  <%=h @spec.local_government_area %>
+</p>
+<p>
+  <strong>Residential Address:</strong>
+  <%=h @spec.residential_address %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%=h @spec.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%=h @spec.state %>
+</p>
+<p>
+  <strong>Zip Code:</strong>
+  <%=h @spec.zip_code %>
+</p>
+<p>
+  <strong>Mobile Number:</strong>
+  <%=h @spec.mobile_number %>
+</p>
+<p>
+  <strong>Home Number:</strong>
+  <%=h @spec.home_number %>
+</p>
+<p>
+  <strong>State Of Participation:</strong>
+  <%=h @spec.state_of_participation %>
+</p>
+<p>
+  <strong>Payment Method:</strong>
+  <%=h @spec.payment_method %>
+</p>
+<p>
+  <strong>Account Name:</strong>
+  <%=h @spec.account_name %>
+</p>
+<p>
+  <strong>Account Number:</strong>
+  <%=h @spec.account_number %>
+</p>
+<p>
+  <strong>Teller Number:</strong>
+  <%=h @spec.teller_number %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_spec_path(@spec) %> |
+  <%= link_to "Destroy", @spec, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", specs_path %>
+</p>

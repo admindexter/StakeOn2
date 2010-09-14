@@ -1,7 +1,16 @@
 class UsersController < ApplicationController
+  before_filter :protect, :only => "index"
   layout 'site'
 
+  def index
+  	@last_five_presses = Press.find(:all, :limit => 5, :order => "created_at DESC")
+
+    @users = User.all
+  end
+
   def new
+  	@last_five_presses = Press.find(:all, :limit => 5, :order => "created_at DESC")
+
     @user = User.new
   end
 
@@ -16,6 +25,8 @@ class UsersController < ApplicationController
   end
 
   def edit
+  	@last_five_presses = Press.find(:all, :limit => 5, :order => "created_at DESC")
+
     @user = current_user
   end
 
