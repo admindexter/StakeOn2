@@ -27,8 +27,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.contact 'contact', :controller => 'site', :action => 'contact'
 
-
-  map.connect 'profile/:username', :controller => 'profile', :action => 'show'
+  map.profile 'profile/:username', :controller => 'profile', :action => 'show'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

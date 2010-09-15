@@ -1,11 +1,23 @@
 class UsersController < ApplicationController
+  include ApplicationHelper
+	helper :profile
+
   before_filter :protect, :only => "index"
+
   layout 'site'
 
   def index
   	@last_five_presses = Press.find(:all, :limit => 5, :order => "created_at DESC")
 
     @users = User.all
+
+    @title = "StakeOn2 User Hub"
+
+    @user = current_user
+
+    @user.spec ||= Spec.new
+
+    @spec = @user.spec
   end
 
   def new

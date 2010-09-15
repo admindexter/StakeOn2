@@ -32,5 +32,15 @@ class Spec < ActiveRecord::Base
   validates_attachment_presence :photo
   validates_attachment_size :photo, :less_than => 500.kilobytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/jpg', 'image/gif', 'image/png']
+
+  # Return the full name (first plus last)
+  def full_name
+    [first_name, last_name].join(" ")
+  end
+
+  # Return a sensibly formatted location string.
+  def location
+    [city, state, zip_code].join(" ")
+  end
 end
 

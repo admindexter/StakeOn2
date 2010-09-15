@@ -417,6 +417,15 @@ label {
     height:             125px;
 }
 
+#spec_div_photo_holder {
+	float:				right;
+	background:         #c7c7c7;
+	border: 			1px solid #5a5a5a;
+	padding:			5px;
+	width:              202px;
+	height:             202px;
+}
+
 
 
 /* Pagination and Return Link Styles */
