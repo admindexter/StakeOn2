@@ -1,4 +1,4 @@
-  <% form_for :spec do |f| %>
+  <% form_for :spec, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :first_name %><br />
@@ -83,6 +83,11 @@
     <%= f.label :teller_number %><br />
     <%= f.text_field :teller_number %>
   </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+
   <p><%= f.submit %></p>
 <% end %>
 

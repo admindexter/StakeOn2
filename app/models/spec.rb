@@ -1,7 +1,13 @@
 class Spec < ActiveRecord::Base
   belongs_to :user
 
-  attr_accessible :user_id, :first_name, :last_name, :gender, :birthdate, :state_of_origin, :local_government_area, :residential_address, :city, :state, :zip_code, :occupation, :mobile_number, :home_number, :state_of_participation, :payment_method, :bank_name, :account_name, :account_number, :teller_number
+  attr_accessible :user_id, :first_name, :last_name, :gender, :birthdate, :state_of_origin, :local_government_area, :residential_address, :city, :state, :zip_code, :occupation, :mobile_number, :home_number, :state_of_participation, :payment_method, :bank_name, :account_name, :account_number, :teller_number, :photo
+
+  has_attached_file :photo, :styles => { :thumbnail => "100x100>", :portrait => "150x150>",
+                    :snapshot => "200x200", :medium => "180x180>", :standard => "300x300>",
+                    :preview => "500x500>" },
+  					        :url => "/assets/articles/:id/:style/:basename.:extension",
+  					        :path => ":rails_root/public/assets/articles/:id/:style/:basename.:extension"
 
   ALL_FIELDS = %w(first_name last_name gender birthdate state_of_origin local_government_area residential_address city state zip_code occupation mobile_number home_number state_of_participation payment_method bank_name account_name account_number teller_number)
 
@@ -22,5 +28,9 @@ class Spec < ActiveRecord::Base
 
   validates_format_of     :zip_code, :with => /(^$|^[0-9]{#{ZIP_CODE_LENGTH}}$)/,
                           :message => "must be a five digit number"
+
+  validates_attachment_presence :photo
+  validates_attachment_size :photo, :less_than => 500.kilobytes
+  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/jpg', 'image/gif', 'image/png']
 end
 

@@ -10,6 +10,10 @@ body {
 	color: #000000;
 }
 
+img {
+    border:                     none;
+}
+
 #header_top {
 	height: 87px;
 	background: #000 url(../images/header_top_bg.jpg) repeat-x left top;

@@ -10,6 +10,17 @@ body {
 	color: #000000;
 }
 
+img {
+    border:                     none;
+}
+
+label {
+    font-size:                  14px;
+    color:                      #9d1c20;
+    line-height:                30px;
+    text-transform:             capitalize;
+}
+
 #header_top {
 	height: 87px;
 	background: #000 url(../images/header_top_bg.jpg) repeat-x left top;
@@ -47,15 +58,13 @@ body {
 }
 
 .button {
-    font-family:                Georgia, serif;
-    font-size:                  10px;
+    font-family:                Helvetica, Arial, sans-serif;
+    font-size:                  11px;
     font-style:                 normal;
     font-weight:                normal;
     text-transform:             uppercase;
-    letter-spacing:             0px;
+    letter-spacing:             normal;
     line-height:                35px;
-
-
 	background:			 		url(../images/navigation_highlight_button_128.jpg) repeat-x;
 	float: 						left;
 	height:			 			35px;
@@ -287,6 +296,19 @@ body {
 .sub_heading {
     font-weight:                bold;
     color:                      #9d1c20;
+}
+
+.main_heading {
+    text-align:                 center;
+    font-size:                  14px;
+    font-weight:                bold;
+    color:                      #9d1c20;
+    text-transform:             uppercase;
+}
+
+.list_heading {
+    color:                      #9d1c20;
+    text-transform:             uppercase;
 }
 
 #footer {

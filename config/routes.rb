@@ -17,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.games 'games', :controller => 'site', :action => 'games'
 
-  map.winner 'winner', :controller => 'site', :action => 'winner'
+  map.faq 'faq', :controller => 'site', :action => 'faq'
 
   map.learn 'learn', :controller => 'site', :action => 'learn'
 
