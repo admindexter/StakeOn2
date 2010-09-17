@@ -41,6 +41,5 @@ Rails::Initializer.run do |config|
 end
 
 DB_STRING_MAX_LENGTH = 255
-DB_TEXT_MAX_LENGTH = 40000
 HTML_TEXT_FIELD_SIZE = 15
 
