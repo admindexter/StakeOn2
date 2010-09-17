@@ -1,0 +1,34 @@
+<% title "Faqs" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Bio</th>
+    <th>Skillz</th>
+    <th>Schools</th>
+    <th>Schools</th>
+    <th>Companies</th>
+    <th>Music</th>
+    <th>Movies</th>
+    <th>Television</th>
+    <th>Magazines</th>
+    <th>Books</th>
+  </tr>
+  <% for faq in @faqs %>
+    <tr>
+      <td><%=h faq.user_id %></td>
+      <td><%=h faq.bio %></td>
+      <td><%=h faq.skillz %></td>
+      <td><%=h faq.schools %></td>
+      <td><%=h faq.schools %></td>
+      <td><%=h faq.companies %></td>
+      <td><%=h faq.music %></td>
+      <td><%=h faq.movies %></td>
+      <td><%=h faq.television %></td>
+      <td><%=h faq.magazines %></td>
+      <td><%=h faq.books %></td>
+      <td><%= link_to "Edit", edit_faq_path(faq) %></td>
+    </tr>
+  <% end %>
+</table>
+

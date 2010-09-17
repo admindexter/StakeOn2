@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :faqs
+
   map.resources :galleries
 
   map.resources :presses
@@ -13,7 +15,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
 
+  map.marketer 'marketer', :controller => 'rules', :action => 'marketer'
+
   map.result 'result', :controller => 'site', :action => 'result'
+
+  map.album 'album', :controller => 'site', :action => 'album'
 
   map.games 'games', :controller => 'site', :action => 'games'
 
@@ -23,9 +29,15 @@ ActionController::Routing::Routes.draw do |map|
 
   map.play 'play', :controller => 'site', :action => 'play'
 
+  map.winner 'winner', :controller => 'site', :action => 'winner'
+
+  map.vendors 'vendors', :controller => 'site', :action => 'vendors'
+
   map.register 'register', :controller => 'site', :action => 'register'
 
   map.contact 'contact', :controller => 'site', :action => 'contact'
+
+  map.hub 'user', :controller => 'user', :action => 'index'
 
   map.profile 'profile/:username', :controller => 'profile', :action => 'show'
 

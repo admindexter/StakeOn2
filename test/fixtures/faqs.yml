@@ -1,0 +1,25 @@
+one:
+  user_id: 1
+  bio: MyText
+  skillz: MyText
+  schools: MyText
+  schools: MyText
+  companies: MyText
+  music: MyText
+  movies: MyText
+  television: MyText
+  magazines: MyText
+  books: MyText
+
+two:
+  user_id: 1
+  bio: MyText
+  skillz: MyText
+  schools: MyText
+  schools: MyText
+  companies: MyText
+  music: MyText
+  movies: MyText
+  television: MyText
+  magazines: MyText
+  books: MyText

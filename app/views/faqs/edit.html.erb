@@ -1,0 +1,52 @@
+<% title "Edit Faq" %>
+
+<% form_for @faq do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </p>
+  <p>
+    <%= f.label :skillz %><br />
+    <%= f.text_area :skillz %>
+  </p>
+  <p>
+    <%= f.label :schools %><br />
+    <%= f.text_area :schools %>
+  </p>
+  <p>
+    <%= f.label :schools %><br />
+    <%= f.text_area :schools %>
+  </p>
+  <p>
+    <%= f.label :companies %><br />
+    <%= f.text_area :companies %>
+  </p>
+  <p>
+    <%= f.label :music %><br />
+    <%= f.text_area :music %>
+  </p>
+  <p>
+    <%= f.label :movies %><br />
+    <%= f.text_area :movies %>
+  </p>
+  <p>
+    <%= f.label :television %><br />
+    <%= f.text_area :television %>
+  </p>
+  <p>
+    <%= f.label :magazines %><br />
+    <%= f.text_area :magazines %>
+  </p>
+  <p>
+    <%= f.label :books %><br />
+    <%= f.text_area :books %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+
+

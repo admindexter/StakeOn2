@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_one :spec
+  has_one :faq
 
   attr_accessible :username, :email, :password, :password_confirmation, :photo
   acts_as_authentic

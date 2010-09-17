@@ -31,7 +31,7 @@
     <span class="button"><%= link_to_unless_current 'Home', home_path %>
     <!-- end .button --></span>
 
-    <span class="button"><%= link_to_unless_current 'Results', result_path %>
+    <span class="button"><%= link_to_unless_current 'Rules', marketer_path %>
     <!-- end .button --></span>
 
     <span class="button"><%= link_to_unless_current 'Our Games', games_path %>
@@ -84,9 +84,80 @@
 <!-- end #content --></div>
 
 <div id="container">
+
+  <div id="container_holder">
+
+    <span id="winners_div">
+
+      <div id="winners_div_content">
+
+        <br /><br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+
+      <!-- end #winners_div_content --></div>
+
+      <div id="winners_div_button">
+
+        <%= link_to image_tag( "footer_view_more_button_normal.jpg", :mouseover => "/images/footer_view_more_button_highlight.jpg" ), winner_path %>
+
+      <!-- end #winners_div_button --></div>
+
+    <!-- end #winners_div --></span>
+
+    <span id="vendors_div">
+
+      <div id="vendors_div_content">
+
+        <br /><br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+        Coming soon...<br />
+
+      <!-- end #vendors_div_content --></div>
+
+      <div id="vendors_div_button">
+
+        <%= link_to image_tag( "footer_view_more_button_normal.jpg", :mouseover => "/images/footer_view_more_button_highlight.jpg" ), vendors_path %>
+
+      <!-- end #vendors_div_button --></div>
+
+    <!-- end #vendors_div --></span>
+
+    <span id="blog_div">
+
+      <div id="blog_div_content">
+
+        <br /><br />
+        Administrators<br />
+        <div id="blog_div_content_text">
+          This space will hold the last blog post made by any member of the StakeOn2 community.
+          Registered members are free to come online and post information and gists that involves
+          StakeOn2. Enjoy the services that StakeOn2 has to offer.
+        <!-- end #blog_div_content_text --></div>
+
+      <!-- end #blog_div_content --></div>
+
+      <div id="blog_div_button">
+
+        <%= link_to image_tag( "footer_view_more_button_normal.jpg", :mouseover => "/images/footer_view_more_button_highlight.jpg" ), login_path %>
+
+      <!-- end #blog_div_button --></div>
+
+    <!-- end #blog_div --></span>
+
+  <!-- end #footer_holder --></div>
+
 <!-- end #container --></div>
 
-<div id="footer">
+<div id="footer">&copy; Grandada Integrated Services Limited 2010. All rights reserved.
 <!-- end #footer --></div>
 
 </body>
